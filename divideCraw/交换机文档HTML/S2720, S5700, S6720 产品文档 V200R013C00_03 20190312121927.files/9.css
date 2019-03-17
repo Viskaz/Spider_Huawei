@@ -1,0 +1,249 @@
+@charset "utf-8";
+html,
+body {
+	margin: 0 auto;
+	padding: 0px;
+	width: 1280px;/*从100%修改为一个起始固定的值。一般为1000px*/
+	height: 100%;
+	border: 0px;
+	font-family: Microsoft YaHei;
+}
+input[type='button'],
+input[type='submit'] {
+	-webkit-appearance: none;
+}
+ul,
+li {
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	list-style: none;
+}
+a,
+img {
+	border: 0px;
+}
+a {outline:none}
+
+/*四图精品推荐*/
+
+.contant2 {
+	position: relative;
+	text-align: center;
+}
+.server_title {
+	position: relative;
+	width: 100%;
+	font-size: 26pt;
+	/*padding-top: 155px;*/
+	padding: 8pt 0 30px 0;
+	text-align: center;
+}
+.server_contant {
+	position: relative;
+	width: 96%;
+	margin: 15pt auto;
+	text-align:center;
+}
+.server_contant_con1 {
+	position: relative;
+	width: 22%;
+	display: inline-block;
+	vertical-align: top;
+}
+.server_contant_con {
+	position: relative;
+	width: 22%;
+	margin-left:3.4%;
+	display: inline-block;
+	vertical-align: top;
+}
+.server_contant_con_pc {
+	position: relative;
+	width: 22%;
+	margin-left:3.4%;
+	display: inline-block;
+	vertical-align: top;
+}
+.server_contant_img {
+	position: relative;
+	width: 100%;
+}
+
+.server_contant_pic {
+	position: relative;
+	width: 100%;
+}
+.server_contant_font_title {
+	position: relative;
+	width: 100%;
+	font-size: 17pt;
+	color: #0a73ac;
+	/*color: #36A0DA;*/
+	text-align: middle;
+	line-height: 30pt;
+	margin-bottom: 15pt;
+}
+.server_contant_font_title a{
+	text-decoration: none;
+	font-size: 15pt;
+	color: #333333;
+
+}
+.server_contant_font_contant {
+	position: relative;
+	width: 100%;
+	font-size: 12pt;
+	color: #000000;
+	text-align: left;
+	margin-bottom: 30pt;
+}
+/*服务结束*/
+/*左图右文*/
+
+.contant3 {
+	position: relative;
+}
+.periodical_title {
+	position: relative;
+	width: 100%;
+	font-size: 26pt;
+	/*padding-top: 155px;*/
+	padding: 38pt 0 50px 0;
+	text-align: center;
+}
+.periodical_contant {
+	position: relative;
+	width: 95%;
+	margin: 8pt auto;
+
+}
+.periodical_contant_con {
+	position: relative;
+	width: 48%;
+	margin: 0px 0px;
+	display: inline-block;
+	background-color:#F9F9F9;
+}
+
+.periodical_left {
+	position: absolute;
+	width: 60%;
+	/*height: 100%;
+	height: 267px;*/
+	/*height:auto;*/
+	background-color: #F9F9F9;
+	text-align: left;
+	display: inline-block;
+	border: 0px;
+	vertical-align: top;
+}
+
+
+.periodical_right {
+	position: relative;
+	/*width: 40%;*/
+	display: inline-block;
+	float: right;
+	/*margin-left: -5px;*/
+	/*top: 69px;*/
+}
+.periodical_right_a{
+	display: block;
+}
+.periodical_right_pic {
+	position: relative;
+	width: 100%;
+	border: 0px;
+	display: block;
+}/*左侧的图片区域*/
+.third_con {
+	margin-top: 17pt;
+}
+.more {
+	position: relative;
+	width: 170px;
+	height: 30pt;
+	font-size: 15pt;
+	text-align: center;
+	line-height: 30pt;
+	margin: 60px auto 100px auto;
+	border: 2px solid #D92B2C;
+}
+.more a{
+	font-size: 15pt;
+	color:#000;
+	text-decoration: none;
+	display: block;
+}
+.more a:hover{
+	color:#ffffff;
+	background-color: #D92B2C;
+}
+	/*杂志结束*/
+/*最后开始*/
+
+.contant4 {
+	position: relative;
+	background-color: #EDEDED;
+	text-align: center;
+}
+.last_contant {
+	position: relative;
+	width: 82.5%;
+	margin: 0 auto;
+}
+.last_con {
+	position: relative;
+	padding-bottom: 100px;
+}
+.last_left {
+	position: relative;
+	width: 48%;
+	padding-top: 23pt;
+	margin: 0px 6px;
+	display: inline-block;
+}
+.last_left_pic {
+	position: relative;
+	width: 100%;
+}
+.last_font_bg {
+	position: absolute;
+	width: 100%;
+	height: 38pt;
+	bottom: 5px;
+	opacity: 0.5;
+	font-size: 21pt;
+	text-align: center;
+	background-color: #000000;
+	z-index: 9;
+}
+.last_font_con {
+	position: absolute;
+	width: 100%;
+	height: 38pt;
+	bottom: 5px;
+	font-size: 15pt;
+	text-align: center;
+	color: #FFFFFF;
+	z-index: 10;
+	line-height: 38pt;
+}
+.last_right {
+	position: relative;
+	width: 48%;
+	padding-top: 23pt;
+	margin: 0px 6px;
+	display: inline-block;
+}
+.last_right_pic {
+	position: relative;
+	width: 100%;
+}
+
+.Phone{
+	display: none;
+}
+/*最后结束*/

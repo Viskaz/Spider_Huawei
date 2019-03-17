@@ -1,0 +1,180 @@
+﻿@media screen and (max-width:980px)
+{
+	table
+	{
+		margin: 0;/*保持滚动条在表格底部*/
+		border-collapse: collapse;
+	}
+	td, th
+	{
+		min-width:100px;/*表格单元格最小宽度*/
+	}
+	td.gutter
+	{
+		min-width: inherit;/*代码着色功能，代码整体位置缩进*/
+	}
+	.colHidden .colHiddenTitle
+	{
+		display: none;
+	}
+	.filterBtn
+	{
+		display: none;
+	}
+	.dataTable th span.filterTh
+	{
+		display: none;
+	}
+	table{
+		overflow-y: auto;
+		overflow: auto;
+		margin: 0 0 1em;
+	}
+	.ullinks
+	{
+		border-left: 0em;
+		margin-left:0em;
+		padding-left: 0em;
+		margin-top: 15pt;
+	}
+	.ullinks a[href]
+	{
+		display:inline-block;
+		padding-top:8pt;
+		padding-bottom:8pt;
+		padding-left:15pt;
+		width:98%;
+		text-decoration: blink;
+	}
+	.ullinks dl
+	{
+		margin-bottom: 0em;
+		display: block;
+		margin-top:0em;
+		margin-bottom:0em;
+		border-bottom:1px #cccccc solid;
+		text-align: left;
+		color:#3388FB;
+		text-decoration:none;
+		font-size:11pt;
+	}
+	.ullinks dl dd
+	{
+		padding-left: 15pt;
+	}
+	.ullinks dl:nth-of-type(1){
+		border-top:1px #cccccc solid;
+	}
+	.footerNavBar
+	{
+		background-color: none;
+		padding: 8pt 15px 50px 15px;
+		position: relative;
+	}
+	.footerNavBar .bottomNavBtn
+	{
+		background: none;
+		position: absolute;
+		top: 2.7em;
+		padding: 0em 0em 0em 0em;
+		width: 100%;
+	}
+	.footerNavBar .copyrightBottomBar
+	{
+		display: none;
+	}
+	.footerNavBar .copyrightBottomBar_responsive
+	{
+		display: block;
+		text-align:center;
+		padding: 1em;
+		font-size: 9pt;
+		color: #999;
+		padding-top: 2em;
+	}
+	.footerNavBar .bottomNavBtn a
+	{
+		text-align: left;
+		text-indent: 1em;
+	}
+	.footerNavBar .bottomNavBtn a:nth-of-type(2)
+	{
+		text-align: right;
+		margin-left: -1em;
+		margin-right: 1em;
+	}
+	.footerNavBar .copyrightBottomBarNoParentLink_responsive
+	{
+		display: block;
+		text-align: center;
+		font-size: 9pt;
+		color: #999;
+	}
+	.footerNavBar .copyrightBottomBarNoParentLink
+	{
+		display: none;
+	}
+	img
+	{
+		max-width:100%;
+	}
+	ol
+	{
+		margin : 1em 6px 1em 6px;
+	}
+	table ol
+	{
+		margin : 1em 6px 1em 20px;
+	} 
+	.sectiontitle
+	{
+		width: 100%; 
+		margin: 0 0 1em;
+	}
+	video
+	{
+		width:100%;
+		height:100%;
+		display:block;
+	}
+	.videoForResponsive
+	{
+		display:block;
+	}
+	#jplayer-container
+	{
+		display:none;
+	}
+	.tableBorder{
+		width: 100%;
+		overflow-y: auto;
+		_overflow: auto;
+		margin: 0 0 1em;
+	}
+	pre{
+		width: 100%;
+		overflow-y: auto;
+		_overflow: auto;
+		margin: 0 0 1em;
+	}
+	div.sectionTab{
+		border:none;
+		border-top-width:0;
+		padding:0;
+		position:relative;
+		left:0px;
+		margin:0;
+	}
+	div.sectionTab{
+		display:block !important;
+	}
+	div.sectionTitleTab{
+		display:none;
+	}
+	.footerNavBar .parentlink
+	{
+		text-overflow:ellipsis;
+		overflow:hidden;
+		white-space:nowrap;
+	}
+}

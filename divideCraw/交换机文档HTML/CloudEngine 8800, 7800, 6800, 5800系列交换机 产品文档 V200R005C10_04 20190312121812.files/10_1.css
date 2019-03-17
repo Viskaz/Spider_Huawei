@@ -1,0 +1,306 @@
+﻿@charset "utf-8";
+/*PC*/
+    .header{
+        position:relative;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    .header_left{
+        padding-left: 18%;
+        width:70%;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        position: relative;
+
+    }
+    .biaoti{
+         display: inline-block;
+         float:left;
+         width:80%;
+         height: 100px;
+         text-align:left;
+         }
+     .biaoti_title{
+         color: #000000;
+         font-size: 15pt;
+         font-weight: 800;
+         width:100%;
+         position: relative;
+        padding-left:3%;
+        height:30pt;
+        line-height:15pt;
+        padding-top:20pt;
+     }
+     .banben{
+       color: #808080;
+       font-size: 8pt;
+        font-weight: 400;
+        width:100%;
+        position: relative;
+        padding-left:3%;
+		padding-top:12pt;
+         height:15pt;
+        line-height:15pt;
+
+     }
+	 .note {
+	 color: #808080;
+	 font-size: 7pt;
+	 font-weight: 400;
+	 width: 100%;
+	 position: relative;
+	 padding-left: 3%;
+	 padding-top:3px;
+	 height: 15pt;
+	 line-height: 15pt;
+}
+.logo{
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top:14pt;
+    float:left;
+
+}
+.header_right{
+    position: relative;
+    width:15%;
+    height: 100px;
+    float: right;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align:right;
+    margin-right:15%;
+}
+.header_right a{
+     color: #282828;
+     font-size: 11pt;
+     text-decoration: NONE;
+}
+
+@media screen and (min-width: 969px) and (max-width: 1200px){
+html,body{width:100%}/*当前屏幕宽度*/
+
+ .header{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    .header_left{
+        padding-left: 2.5%;
+        width:80%;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        position: relative;
+
+    }.biaoti{
+         display: inline-block;
+         float:left;
+         width:80%;
+         height: 100px;
+         text-align:left;
+         }
+     .biaoti_title{
+         color: #282828;
+         font-size: 14pt;
+         font-weight: 800;
+         width:100%;
+         position: relative;
+        padding-left:3%;
+        height:30pt;
+        line-height:30pt;
+        padding-top:11pt;
+     }
+     .banben{
+       color: #888888;
+       font-size: 9pt;
+        font-weight: 400;
+        width:100%;
+        position: relative;
+        padding-left:3%;
+         height:15pt;
+        line-height:15pt;
+
+     }
+	 	 .note {
+color: #888888;
+font-size: 9pt;
+font-weight: 400;
+width: 100%;
+position: relative;
+padding-left: 3%;
+height: 15pt;
+line-height: 15pt;
+}
+.logo{
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top:14pt;
+    float:left;
+
+}
+.header_right{
+    position: relative;
+    width:15%;
+    height: 100px;
+    float: right;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align:right;
+    margin-right:15%;
+}
+.header_right a{
+     color: #282828;
+     font-size: 12pt;
+     text-decoration: NONE;
+}
+}
+@media screen and (min-width: 769px) and (max-width: 968px){
+html,body{width:100%}/*当前屏幕宽度*/
+    .header:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+         .header{
+                position: relative;
+                width: 100%;
+                height: 80px;
+                 border-bottom:solid 1px #b9b9b9;
+            }
+
+        .header_left{
+             width:100%;
+             margin: 0 auto;
+             padding-left:0px;
+
+        }
+        .logo{
+            display:none;
+        }
+       .header_right{
+        display:none;
+       }
+       .biaoti{
+            width:100%;
+            height:90px;
+       }
+       .biaoti_title{
+            font-size: 14pt;
+             position: relative;
+             width: 95%;
+             padding-top:5pt;
+            background-color:#F9f91f9;
+            float:left;
+            font-weight: 800;
+            padding-left:2.5%;
+            color: #282828;
+             height:30pt;
+             line-height:15pt;
+             padding-top:11pt;
+       }
+       .banben{
+                position: relative;
+                width: 95%;
+                padding-top:0px;
+                background-color:#F9f91f9;
+                font-size:11pt;
+                color:#666666;
+                float:left;
+                font-weight: 400;
+                padding-left:2.5%;
+                height:15pt;
+                line-height:15pt;
+       }
+.note{
+display: none
+}
+.logo{
+
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top:14pt;
+    float:left;
+
+}
+.header_right{
+    position: relative;
+    width:15%;
+    height: 100px;
+    float: right;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    text-align:right;
+    margin-right:15%;
+}
+.header_right a{
+     color: #282828;
+     font-size: 12pt;
+     text-decoration: NONE;
+}
+}
+/*不同屏幕的显示：手机*/
+@media screen and (min-width: 1px) and (max-width: 768px) {
+html,body{width:100%}/*当前屏幕宽度*/
+     .header{
+            position: relative;
+            width: 100%;
+            /*height:90px;*/
+            border-bottom:solid 1px #b9b9b9;
+        }
+    .header_left{
+	    padding-left: 4.5%;
+         width:95%;
+         margin: 0 ;
+
+    }
+    .logo{
+        display:none;
+    }
+   .header_right{
+    display:none;
+   }
+   .biaoti{
+        width:100%;
+        height:90px;
+   }
+   .biaoti_title{
+        font-size: 13pt;
+         position: relative;
+         width: 100%;
+         padding-top:11pt;
+        background-color:#F9f91f9;
+        padding-left:0;
+        float:left;
+		height: 38pt;
+        line-height: 15pt;
+   }
+   .banben{
+            position: relative;
+            width: 100%;
+            padding-top:4%;
+            padding-bottom:5px;
+            background-color:#F9f91f9;
+            font-size:9pt;
+            color:#666666;
+            padding-left:0;
+   }
+   .note{
+         display: none
+        }
+
+        .header:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+}

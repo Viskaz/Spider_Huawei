@@ -1,0 +1,69 @@
+﻿@charset "utf-8";
+/*底部css样式*/
+body{
+    font-family: "Microsoft YaHei";
+}
+.footer{
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*background-color: #666666;*/
+	/*padding: 15pt 0;*/
+	float: left;
+	/*margin-top: 30pt;*/
+}
+.footer_txt{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 23pt 0;
+}
+
+.footer_txt a{
+	color:#020202;
+	text-decoration: none;
+}
+
+.footer_link{
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	/*width:200px;*/
+	cursor:pointer;
+	font-size:11pt;
+	line-height:1.2em;
+	margin-left:80px;
+	
+}
+.link_logo{
+	display:inline-block;
+	zoom:1;*display:inline;
+}
+.link_name{
+	display:inline-block;
+	zoom:1;*display:inline;
+	max-width:180px;
+	margin-top:11pt;
+	vertical-align:top;
+}
+.copyright{
+    text-align: center;
+    color: #000;
+    font-size: 11pt;
+    padding:0 5px 0 5px;
+    font-weight: normal;
+}
+.copyright a{
+	color: #000;
+	text-decoration: none;
+	line-height: 15pt;
+	/*font-size: 11pt;*/
+	font-weight: normal;
+}
+
+.s1{
+	top:-123px;
+	left:644px;
+	display:none;
+}
