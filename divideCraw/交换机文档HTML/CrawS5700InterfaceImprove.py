@@ -15,14 +15,13 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
     reg = re.compile(("<[^>]*>"))
 
     one_product_all_information = soup.find(attrs={"id": one_product_divID})
-    #找到这个产品的名字，并且生成新的路径
+    # 找到这个产品的名字，并且生成新的路径
     name = one_product_all_information.find('title').string
-    result_file_path = result_file_path + name+"_interface.xlsx"
+    result_file_path = result_file_path + name + "_interface.xlsx"
     print(name)
     # 创建一个execel表格
     read_write_tem.creat_excel_file(result_file_path)
     # 将产品信息通过section分开
-
 
     one_product_sections_information = one_product_all_information.find(attrs={"class": "articleBox"})
     sectionTabs = one_product_sections_information.find_all(attrs={"class": "sectionTab"}, limit=3)
@@ -37,7 +36,7 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
             row_titles = []
             one_table_titles = one_table.thead.tr
             sheet_name = one_table.find("caption")
-            sheet_name = reg.sub('',str(sheet_name)).replace(" ","_").replace("/","")
+            sheet_name = reg.sub('', str(sheet_name)).replace(" ", "_").replace("/", "")
 
             print(sheet_name)
 
@@ -46,7 +45,6 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
                 title_str = reg.sub('', str(title))
                 row_titles.append(title_str)
             print(row_titles)
-
 
             read_write_tem.create_sheet(result_file_path, sheet_name, row_titles)
             print("********************************")
@@ -87,15 +85,26 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
 if __name__ == '__main__':
     source_file_path_S600E = "./S2720_S5700_S6720.html"
     result_file_path_S600E = "./result-data/S5700X/"
-    # all_product_divID = {"section7.3.4.7.1","section7.3.4.7.2","section7.3.4.7.3","section7.3.4.7.4",
-    #                      "section7.3.4.7.5","section7.3.4.7.6","section7.3.4.7.7","section7.3.4.7.8",
-    #                      "section7.3.4.7.9","section7.3.4.7.10","section7.3.4.7.11","section7.3.4.7.12",
-    #                      "section7.3.4.7.13","section7.3.4.7.14","section7.3.4.7.15","section7.3.4.7.16"}
+    all_product_divID = {"section7.3.4.7.1", "section7.3.4.7.2", "section7.3.4.7.3", "section7.3.4.7.4",
+                         "section7.3.4.7.5", "section7.3.4.7.6", "section7.3.4.7.7", "section7.3.4.7.8",
+                         "section7.3.4.7.9", "section7.3.4.7.10", "section7.3.4.7.11", "section7.3.4.7.12",
+                         "section7.3.4.7.13", "section7.3.4.7.14", "section7.3.4.7.15", "section7.3.4.7.16"}
     # all_product_divID = {"section7.3.4.8.1","section7.3.4.8.2","section7.3.4.8.3","section7.3.4.8.4",
     #                      "section7.3.4.8.5","section7.3.4.8.6","section7.3.4.9.1","section7.3.4.9.2",
     #                      "section7.3.4.9.3","section7.3.4.9.4","section7.3.4.9.5","section7.3.4.9.6",
     #                      "section7.3.4.10.1","section7.3.4.10.2","section7.3.4.10.3","section7.3.4.10.4",
     #                      "section7.3.4.10.5"}
-    all_product_divID = {}
+    # all_product_divID = {"section7.3.4.11.1","section7.3.4.11.2","section7.3.4.11.3","section7.3.4.11.4",
+    #                      "section7.3.4.11.5","section7.3.4.11.6","section7.3.4.11.7","section7.3.4.11.8",
+    #                      "section7.3.4.11.9","section7.3.4.11.10","section7.3.4.11.11","section7.3.4.11.12",
+    #                      "section7.3.4.11.13","section7.3.4.11.14","section7.3.4.11.15","section7.3.4.11.16",
+    #                      "section7.3.4.11.17","section7.3.4.11.18","section7.3.4.11.19","section7.3.4.11.20",
+    #                      "section7.3.4.11.21","section7.3.4.11.22","section7.3.4.11.23","section7.3.4.11.24",
+    #                      "section7.3.4.11.25","section7.3.4.11.26"}
+    # all_product_divID = {"section7.3.4.12.1", "section7.3.4.12.2", "section7.3.4.12.3", "section7.3.4.12.4",
+    #                      "section7.3.4.13.1", "section7.3.4.13.2", "section7.3.4.13.3", "section7.3.4.13.4",
+    #                      "section7.3.4.14.1", "section7.3.4.14.2", "section7.3.4.14.3", "section7.3.4.14.4",
+    #                      "section7.3.4.14.5", "section7.3.4.14.6", "section7.3.4.14.7", "section7.3.4.14.8",
+    #                      "section7.3.4.14.9", "section7.3.4.14.10", "section7.3.4.14.11", "section7.3.4.14.12"}
     for one_product_divID in all_product_divID:
         split_product_tables(source_file_path_S600E, result_file_path_S600E, one_product_divID)

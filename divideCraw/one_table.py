@@ -19,7 +19,6 @@ def split_product_tables(source_file_path,result_file_path,result_sheet_name):
         # 创建一个Excel 表格
         read_write_tem.creat_excel_file(result_file_path)
         row_titles = []
-
         row0 = []  # row0用于保存上一行的信息
         flag = True  # row0未初始化
         contents_rows = []  # 用于存储表格信息
@@ -35,7 +34,6 @@ def split_product_tables(source_file_path,result_file_path,result_sheet_name):
         print("********************************")
         for child in one_table_contents:
             row = []  # 保存表格提取结果
-
             if child.find('th'):
                 continue
             if child.find('td'):  # 提取每一行
@@ -68,7 +66,7 @@ if __name__ == '__main__':
     source_file_path_8_2_2_1 = "./final-Data/8-2-2productDescription/8-2-2-1ProductRelationDescription.html"
     result_file_path_8_2_2_1="./final-Data/resultData/8-2-2产品描述/8-2-2-1ProductRelationDescription.xlsx"
     result_sheet_name_8_2_2_1 = "产品配套关系说明"
-    split_product_tables(source_file_path_8_2_2_1,result_file_path_8_2_2_1,result_sheet_name_8_2_2_1)
+    split_product_tables(source_file_path_8_2_2_1,result_file_path_8_2_2_1, result_sheet_name_8_2_2_1)
 
 
 
@@ -77,10 +75,6 @@ if __name__ == '__main__':
     result_file_name_8_2_2_2 = "8-2-2-2Description"
     result_sheet_name_8_2_2_2 = "产品概述"
     split_product_tables(source_file_path_8_2_2_2, result_file_path_8_2_2_2, result_sheet_name_8_2_2_2)
-
-
-
-
 
 
     source_file_path_8_2_2_5= "./final-data/8-2-2productDescription/8-2-2-5CharacteristicsSupportList.html"

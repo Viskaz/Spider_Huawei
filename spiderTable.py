@@ -18,8 +18,6 @@ def load_file(filepath):
             print(row)
             continue
         if child.find('td'):  # 提取每一行
-            # while child.find('sup'):  # 先清洗可能存在的上标符号
-            #     child.find('sup').extract()
             for value in child.children:
                 st = reg.sub('', str(value))
                 row.append(st.strip('\n'))
@@ -36,7 +34,5 @@ def load_file(filepath):
             row0 = row
             row = '-'.join(row)
             print(row)
-
-
 if __name__ == '__main__':
     load_file('./data/semi_structure.html')
