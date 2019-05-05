@@ -29,14 +29,16 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
     index = 0
     for one_section in sectionTabs:
         index += 1
-        if index == 2 or index == 6:
-            continue
+        # if index == 6:
+        #     continue
         all_table = one_section.find_all("table")
         for one_table in all_table:
             row_titles = []
             one_table_titles = one_table.thead.tr
             sheet_name = one_table.find("caption")
             sheet_name = reg.sub('', str(sheet_name)).replace(" ", "_").replace("/", "")
+            if sheet_name == 'None' and index == 3:
+                sheet_name = "后面板"
             # sheet_name = sheet_name[3:]
             print("********************************")
             print(sheet_name)
@@ -84,40 +86,11 @@ def split_product_tables(source_file_path, result_file_path, one_product_divID):
 
 if __name__ == '__main__':
 
-    # source_file_path_S600E = "./S600-E.html"
-    # result_file_path_S600E = "./result-data2/S600/"
-    # all_product_divID = {"section6.2.2.4.1", "section6.2.2.4.2", "section6.2.2.4.3", "section6.2.2.4.4",
-    #                      "section6.2.2.4.5", "section6.2.2.4.6", "section6.2.2.4.7", "section6.2.2.4.8", }
-    # for one_product_divID in all_product_divID:
-    #     split_product_tables(source_file_path_S600E, result_file_path_S600E, one_product_divID)
-
     # 接下来爬取5700，6700系列的表
-    source_file_path_S600E = "./AR100_3600.html"
-    result_file_path_S600E = "./result-data/AR100_3600_Interface/"
-    # all_product_divID = {"section5.3.4.2.1", "section5.3.4.2.2", "section5.3.4.2.3", "section5.3.4.3.1",
-    #                      "section5.3.4.3.2", "section5.3.4.3.3", "section5.3.4.3.4", "section5.3.4.3.5",
-    #                      "section5.3.4.3.6", "section5.3.4.3.7", "section5.3.4.3.8" }
+    source_file_path_S600E = "./USG6000E.html"
+    result_file_path_S600E = "./result-data/USG6000E/"
+    all_product_divID = {"section3.2.1.1.1", "section3.2.1.1.2", "section3.2.1.1.3", "section3.2.1.1.4",
+                         "section3.2.1.1.5", "section3.2.1.1.6", "section3.2.1.1.7", "section3.2.1.1.8"}
 
-    # all_product_divID = {"section5.3.4.4.1", "section5.3.4.4.2", "section5.3.4.4.3", "section5.3.4.4.4",
-    #                      "section5.3.4.4.5", "section5.3.4.4.6", "section5.3.4.4.7", "section5.3.4.4.8",
-    #                      "section5.3.4.4.9", "section5.3.4.4.10", "section5.3.4.4.11", "section5.3.4.4.12",
-    #                      "section5.3.4.5.1", "section5.3.4.5.2", "section5.3.4.5.3", "section5.3.4.5.4",
-    #                      "section5.3.4.5.5", "section5.3.4.5.6", "section5.3.4.5.7", "section5.3.4.5.8",
-    #                      "section5.3.4.5.9", "section5.3.4.5.10", "section5.3.4.5.11", "section5.3.4.5.12",
-    #                      "section5.3.4.5.13", "section5.3.4.5.14", "section5.3.4.5.15", "section5.3.4.5.16",
-    #                      "section5.3.4.5.17", "section5.3.4.5.18", "section5.3.4.5.19", "section5.3.4.5.20"}
-
-    # all_product_divID = {"section5.3.4.6.1", "section5.3.4.6.2", "section5.3.4.6.3", "section5.3.4.6.4",
-    #                      "section5.3.4.6.5", "section5.3.4.6.6", "section5.3.4.6.7", "section5.3.4.6.8",
-    #                      "section5.3.4.6.9", "section5.3.4.7.1", "section5.3.4.7.2", "section5.3.4.7.3",
-    #                      "section5.3.4.7.4", "section5.3.4.7.5", "section5.3.4.7.6", "section5.3.4.7.7",
-    #                      "section5.3.4.7.8", "section5.3.4.7.9", "section5.3.4.7.10", "section5.3.4.7.11",
-    #                      "section5.3.4.7.12", "section5.3.4.8.1", "section5.3.4.8.2", "section5.3.4.8.3",
-    #                      "section5.3.4.8.4", "section5.3.4.8.5", "section5.3.4.8.6", "section5.3.4.8.7",
-    #                      "section5.3.4.8.8", "section5.3.4.8.9", "section5.3.4.8.10", "section5.3.4.8.11",
-    #                      "section5.3.4.8.12", "section5.3.4.8.13", "section5.3.4.8.14", "section5.3.4.8.15",
-    #                      "section5.3.4.8.16", "section5.3.4.8.17", "section5.3.4.8.18", "section5.3.4.8.19",
-    #                      "section5.3.4.8.20", "section5.3.4.8.21" }
-    all_product_divID = {"section5.3.4.9.1", "section5.3.4.10.1"}
     for one_product_divID in all_product_divID:
         split_product_tables(source_file_path_S600E, result_file_path_S600E, one_product_divID)
